@@ -22,7 +22,7 @@ const AddUser = () => {
       })
     );
     try {
-      await axios.post('http://localhost:3090/users', data);
+      await axios.post('https://mern-app-backend-x1cm.onrender.com/users', data);
       navigate('/');
     } catch (error) {
       console.log(error);
