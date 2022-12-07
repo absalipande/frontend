@@ -7,7 +7,9 @@ const Users = () => {
   const [users, setUsers] = useState([]);
 
   const getAllUsers = async () => {
-    const response = await axios.get('http://localhost:3090/users');
+    const response = await axios.get(
+      'https://mern-app-backend-x1cm.onrender.com/users'
+    );
     setUsers(response.data);
   };
 
@@ -51,10 +53,7 @@ const Users = () => {
                 <td>{user.gender}</td>
                 <td>
                   <div className="buttons is-centered are-normal">
-                    <Link
-                      to={`edit/${user._id}`}
-                      className="button is-info"
-                    >
+                    <Link to={`edit/${user._id}`} className="button is-info">
                       Edit
                     </Link>
                     <button
