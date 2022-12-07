@@ -35,7 +35,7 @@ const EditUser = () => {
       })
     );
     try {
-      await axios.patch(`http://localhost:3090/users/${id}`, editData);
+      await axios.patch(`https://mern-app-backend-x1cm.onrender.com/users/${id}`, editData);
       navigate('/');
     } catch (error) {
       console.log(error);

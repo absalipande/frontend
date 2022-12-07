@@ -19,7 +19,7 @@ const Users = () => {
 
   const deleteUser = async (id) => {
     try {
-      await axios.delete(`http://localhost:3090/users/${id}`);
+      await axios.delete(`https://mern-app-backend-x1cm.onrender.com/users/${id}`);
       getAllUsers();
     } catch (error) {
       console.log(error);
