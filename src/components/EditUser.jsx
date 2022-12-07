@@ -12,7 +12,7 @@ const EditUser = () => {
   const navigate = useNavigate();
 
   const getUserById = async () => {
-    const response = await axios.get(`http://localhost:3090/users/${id}`);
+    const response = await axios.get(`https://mern-app-backend-x1cm.onrender.com/users/${id}`);
     setUserName(response.data.name);
     setUserAge(response.data.age);
     setUserEmail(response.data.email);
