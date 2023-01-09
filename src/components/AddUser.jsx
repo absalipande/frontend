@@ -13,14 +13,13 @@ const AddUser = () => {
   const saveNewUser = async (event) => {
     event.preventDefault();
 
-    const data = JSON.parse(
-      JSON.stringify({
-        name: userName,
-        age: userAge,
-        email: userEmail,
-        gender: userGender,
-      })
-    );
+    const data = {
+      name: userName,
+      age: userAge,
+      email: userEmail,
+      gender: userGender,
+    };
+
     try {
       await axios.post(
         'https://mern-app-backend-x1cm.onrender.com/users',

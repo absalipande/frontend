@@ -28,14 +28,13 @@ const EditUser = () => {
   const updateUser = async (event) => {
     event.preventDefault();
 
-    const editData = JSON.parse(
-      JSON.stringify({
-        name: userName,
-        age: userAge,
-        email: userEmail,
-        gender: userGender,
-      })
-    );
+    const editData = {
+      name: userName,
+      age: userAge,
+      email: userEmail,
+      gender: userGender,
+    };
+
     try {
       await axios.patch(
         `https://mern-app-backend-x1cm.onrender.com/users/${id}`,
